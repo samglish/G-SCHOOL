@@ -15,6 +15,7 @@ public class Accueil extends javax.swing.JFrame {
      */
     public Accueil() {
         initComponents();
+        Heure.setVisible(MyClock.isDefaultLookAndFeelDecorated());
     }
 
     /**
@@ -31,7 +32,7 @@ public class Accueil extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jDesktopPane1 = new javax.swing.JDesktopPane();
-        jLocaleChooser1 = new com.toedter.components.JLocaleChooser();
+        Heure = new javax.swing.JPanel();
 
         jMenu1.setText("jMenu1");
 
@@ -59,7 +60,19 @@ public class Accueil extends javax.swing.JFrame {
         );
 
         jPanel2.add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 990, 460));
-        jPanel2.add(jLocaleChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+
+        javax.swing.GroupLayout HeureLayout = new javax.swing.GroupLayout(Heure);
+        Heure.setLayout(HeureLayout);
+        HeureLayout.setHorizontalGroup(
+            HeureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+        HeureLayout.setVerticalGroup(
+            HeureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 60, Short.MAX_VALUE)
+        );
+
+        jPanel2.add(Heure, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 20, 300, 60));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 560));
 
@@ -102,11 +115,12 @@ public class Accueil extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Heure;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
-    private com.toedter.components.JLocaleChooser jLocaleChooser1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPopupMenu jPopupMenu1;
     // End of variables declaration//GEN-END:variables
+
 }
