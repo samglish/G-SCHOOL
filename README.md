@@ -21,4 +21,5 @@
             
 ```
 note that `horloge` is a Jlabel just placed below the G-SCHOOL title
+
 <img src="MyApp1.png" width="100%">
