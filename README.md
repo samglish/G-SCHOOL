@@ -14,5 +14,10 @@ G-SCHOOL - secondary school management application
               );
             }
          });
+
+         t.setRepeats(true);
+         t.setCoalesce(true);
+         t.setInitialDelay(0);
+         t.start();
             
 ```
