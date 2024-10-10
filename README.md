@@ -1,5 +1,5 @@
 # G-SCHOOL
-G-SCHOOL - secondary school management application
+##  G-SCHOOL - secondary school management application
 
 ### the automatic clock
 ```java
