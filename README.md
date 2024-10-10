@@ -20,3 +20,4 @@ G-SCHOOL - secondary school management application
          t.start();
             
 ```
+<img src="MyApp1.png" width="100%">
