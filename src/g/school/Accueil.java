@@ -32,41 +32,10 @@ public class Accueil extends javax.swing.JFrame {
      */
     public Accueil() {
          initComponents();
-          new MyClock();
-        EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                  UIManager.
-                     setLookAndFeel(
-                      UIManager.getSystemLookAndFeelClassName()
-                     );
-                } catch (ClassNotFoundException ex) {
-                } catch (InstantiationException ex) {
-                } catch (IllegalAccessException ex) {
-                } catch (UnsupportedLookAndFeelException ex) {
-                }
-
-                       }
-        });
-    }
-       public class MyPanel extends JPanel 
-    {
-       private JLabel horloge;
-
-       public MyPanel() {
-         setLayout(new BorderLayout());
-         horloge = new JLabel();
-         horloge.setHorizontalAlignment(JLabel.CENTER);
-         horloge.setFont(
-           UIManager.getFont("Label.font").deriveFont(Font.BOLD, 50f)
-         );
          horloge.setText(
            DateFormat.getDateTimeInstance().format(new Date())
          );
-         add(horloge);
-
-         Timer t = new Timer(500, new ActionListener() {
+            Timer t = new Timer(500, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
               horloge.setText(
@@ -78,7 +47,13 @@ public class Accueil extends javax.swing.JFrame {
          t.setCoalesce(true);
          t.setInitialDelay(0);
          t.start();
-       }
+     
+    }
+       public class MyPanel extends JPanel 
+    {
+       private JLabel horloge;
+
+      
     }
 
     /**
