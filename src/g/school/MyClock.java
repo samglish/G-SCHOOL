@@ -46,6 +46,10 @@ public class MyClock extends javax.swing.JFrame {
         });
     }
 
+    MyClock() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     public class MyPanel extends JPanel 
     {
        private JLabel horloge;

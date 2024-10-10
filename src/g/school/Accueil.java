@@ -4,18 +4,81 @@
  */
 package g.school;
 
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.DateFormat;
+import java.util.Date;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.Timer;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
 /**
  *
  * @author samglish
  */
 public class Accueil extends javax.swing.JFrame {
 
-    /**
+    /*
      * Creates new form Accueil
      */
     public Accueil() {
-        initComponents();
-        Heure.setVisible(MyClock.isDefaultLookAndFeelDecorated());
+         initComponents();
+          new MyClock();
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                  UIManager.
+                     setLookAndFeel(
+                      UIManager.getSystemLookAndFeelClassName()
+                     );
+                } catch (ClassNotFoundException ex) {
+                } catch (InstantiationException ex) {
+                } catch (IllegalAccessException ex) {
+                } catch (UnsupportedLookAndFeelException ex) {
+                }
+
+                       }
+        });
+    }
+       public class MyPanel extends JPanel 
+    {
+       private JLabel horloge;
+
+       public MyPanel() {
+         setLayout(new BorderLayout());
+         horloge = new JLabel();
+         horloge.setHorizontalAlignment(JLabel.CENTER);
+         horloge.setFont(
+           UIManager.getFont("Label.font").deriveFont(Font.BOLD, 50f)
+         );
+         horloge.setText(
+           DateFormat.getDateTimeInstance().format(new Date())
+         );
+         add(horloge);
+
+         Timer t = new Timer(500, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+              horloge.setText(
+                 DateFormat.getDateTimeInstance().format(new Date())
+              );
+            }
+         });
+         t.setRepeats(true);
+         t.setCoalesce(true);
+         t.setInitialDelay(0);
+         t.start();
+       }
     }
 
     /**
@@ -32,7 +95,7 @@ public class Accueil extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jDesktopPane1 = new javax.swing.JDesktopPane();
-        Heure = new javax.swing.JPanel();
+        horloge = new javax.swing.JLabel();
 
         jMenu1.setText("jMenu1");
 
@@ -60,19 +123,7 @@ public class Accueil extends javax.swing.JFrame {
         );
 
         jPanel2.add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 990, 460));
-
-        javax.swing.GroupLayout HeureLayout = new javax.swing.GroupLayout(Heure);
-        Heure.setLayout(HeureLayout);
-        HeureLayout.setHorizontalGroup(
-            HeureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-        HeureLayout.setVerticalGroup(
-            HeureLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
-        );
-
-        jPanel2.add(Heure, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 20, 300, 60));
+        jPanel2.add(horloge, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 30, 250, 40));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 560));
 
@@ -115,7 +166,7 @@ public class Accueil extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Heure;
+    private javax.swing.JLabel horloge;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
