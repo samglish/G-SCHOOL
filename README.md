@@ -6,5 +6,13 @@ G-SCHOOL - secondary school management application
  horloge.setText(
            DateFormat.getDateTimeInstance().format(new Date())
          );
+         Timer t = new Timer(500, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+              horloge.setText(
+                 DateFormat.getDateTimeInstance().format(new Date())
+              );
+            }
+         });
             
 ```
