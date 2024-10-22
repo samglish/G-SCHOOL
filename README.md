@@ -63,5 +63,6 @@ CREATE TABLE IF NOT EXISTS "Inscription" (
 	"ProfessionMere"	TEXT,
 	"telMere"	INTEGER,
 	"PremiereT"	INTEGER,
+	"DeuxiemeT"	INTEGER,
 	
 ```
