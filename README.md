@@ -46,5 +46,14 @@ CREATE TABLE IF NOT EXISTS "Inscription" (
 	"ID"	INTEGER,
 	"Noms"	TEXT,
 	"DateNaissance"	TEXT,
+	"LieuNaissance"	TEXT,
+	"Pays"	TEXT,
+	"Sexe"	TEXT,
+	"Adresse"	TEXT,
+	"ClassePrecedente"	TEXT,
+	"AutrePrecedente"	TEXT,
+	"Classe"	TEXT,
+	"AutreClasse"	TEXT,
+	"Telephone"	INTEGER,
 	
 ```
