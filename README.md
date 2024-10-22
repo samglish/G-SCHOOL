@@ -64,5 +64,7 @@ CREATE TABLE IF NOT EXISTS "Inscription" (
 	"telMere"	INTEGER,
 	"PremiereT"	INTEGER,
 	"DeuxiemeT"	INTEGER,
-	
+	PRIMARY KEY("ID" AUTOINCREMENT)
+);
+COMMIT;
 ```
