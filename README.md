@@ -38,7 +38,7 @@ note that `horloge` is a Jlabel just placed below the G-SCHOOL title
 
 <img src="MyApp5.png" width="100%">
 
-# Database
+# Sql code Table Inscription
 
 ```sql
 BEGIN TRANSACTION;
