@@ -38,4 +38,13 @@ note that `horloge` is a Jlabel just placed below the G-SCHOOL title
 
 <img src="MyApp5.png" width="100%">
 
-# Database connection
+# Database
+
+```sql
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS "Inscription" (
+	"ID"	INTEGER,
+	"Noms"	TEXT,
+	"DateNaissance"	TEXT,
+	
+```
