@@ -27,8 +27,13 @@ note that `horloge` is a Jlabel just placed below the G-SCHOOL title
 <img src="MyApp2.png" width="100%">
 
 # menu 
+
 <img src="MyApp3.png" width="100%">
+
 # Accueil
+
 <img src="MyApp4.png" width="100%">
+
 # Inscription
+
 <img src="MyApp5.png" width="100%">
