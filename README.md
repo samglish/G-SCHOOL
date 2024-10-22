@@ -55,5 +55,13 @@ CREATE TABLE IF NOT EXISTS "Inscription" (
 	"Classe"	TEXT,
 	"AutreClasse"	TEXT,
 	"Telephone"	INTEGER,
+	"Email"	TEXT,
+	"NomPere"	TEXT,
+	"ProfessionPere"	TEXT,
+	"Telpere"	INTEGER,
+	"NomMere"	TEXT,
+	"ProfessionMere"	TEXT,
+	"telMere"	INTEGER,
+	"PremiereT"	INTEGER,
 	
 ```
