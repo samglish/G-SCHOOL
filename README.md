@@ -1,4 +1,3 @@
--- Active: 1724681452388@@127.0.0.1@3306
 # G-SCHOOL
 ##  G-SCHOOL - secondary school management application
 
@@ -31,3 +30,4 @@ note that `horloge` is a Jlabel just placed below the G-SCHOOL title
 <img src="MyApp3.png" width="100%">
 # Accueil
 <img src="MyApp4.png" width="100%">
+# Inscription
